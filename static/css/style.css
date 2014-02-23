@@ -1,0 +1,64 @@
+.filelist {
+	font-size: 16px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+#c-width {
+    width: 1024px;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
+}
+
+.footer-b {
+    width: 100%;
+    height: 65px;
+    background: #f9f9f9;
+    padding: 5px 0 5px 0;
+    border: 1px solid #ccc;
+    bottom: 0;
+    position: fixed;
+}
+
+.cent-btn {
+    max-width: 290px; margin: 0 auto 10px;
+}
+
+.cent-upload {
+    max-width: 600px; margin: 0 auto 10px;
+}
+
+.cent-prog {
+    max-width: 400px; margin: 0 auto 10px;
+}
+
+#wrap {min-height: 100%;}
+
+#main {overflow:auto;
+	padding-bottom: 180px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top: -180px; /* negative value of footer height */
+	height: 180px;
+	clear:both;} 
+
+
+#progress { position:relative; width:400px; border: 1px solid #ddd; padding: 1px; border-radius: 3px; }
+#bar { background-color: #B4F5B4; width:0%; height:20px; border-radius: 3px; }
+#percent { position:absolute; display:inline-block; top:3px; left:48%; }

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+fuser -k 8080/tcp
+cd /home/cms/Desktop/SimpleFileUpload
+nohup python webserver.py &
+
+exit 0

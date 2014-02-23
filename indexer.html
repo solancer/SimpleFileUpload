@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en' ng-app>
+<head>
+ <title>Fileupload Server</title>
+ <link rel='stylesheet' href='./static/css/bootstrap.min.css'/>
+ <link rel='stylesheet' href='./static/css/style.css'/>
+ <link rel='stylesheet' href='./static/css/bootstrap-theme.min.css'/>
+ <script type="text/javascript" src="./static/js/angular.min.js"></script>
+ <script type="text/javascript" src="./static/js/controller.js"></script>
+</head>
+<body>
+	<div id='wrap'>
+		<div id="main">
+			<div class='page-header'>
+				<h3 class='text-center'>File Upload Server</h3>
+				<div class='cent-btn'>
+				    <a href='/upload' class='btn btn-primary btn-lg btn-block'>Upload file</a>
+				    <div class="clear-fix"></div>
+				    <form  class="navbar-form" role="Search">
+						<input type="text" ng-model="query.name" placeholder="Search file name..." class="form-control">
+					</form>
+				</div>
+			</div>
+			<div id="c-width" class='container' ng-controller='Data'>
+				<table class="table table-hover table-bordered">
+					<th><a href="" ng-click="predicate = 'name'; reverse=!reverse">File name</a></th>
+					<th><a href="" ng-click="predicate = 'mod'; reverse=!reverse">Modified date</a></th>
+					<th><a href="" ng-click="predicate = 'size'; reverse=!reverse">Size</a></th>
+				    <tr ng-repeat="i in list | filter:query | orderBy:predicate:reverse">
+				    	<td><a class="filelist" href="{{i.name}}"> <i class="glyphicon glyphicon-circle-arrow-down"></i> {{i.name}}</a></td>
+				    	<td>{{i.mod}}</td>
+				    	<td>{{i.size}}</td>
+				    </tr>
+				</table>
+			</div>
+			<div class="footer-b">
+				<h5 class='text-center'>
+				<strong><a href='mailto:srinivas@solancer.com?Subject=Hello there'>By Srinivas Gowda</a></strong>
+				<small><img src='./static/python-powered.png'></small>
+				</h5>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
